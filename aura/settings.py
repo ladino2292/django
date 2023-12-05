@@ -76,12 +76,12 @@ WSGI_APPLICATION = 'aura.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'libreria',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '3307'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'libreriasql',
+        #'USER': 'root',
+        #'PASSWORD': 'password',
+        #'HOST': 'localhost',
+        #'PORT': '3306'
     }
 }
 
