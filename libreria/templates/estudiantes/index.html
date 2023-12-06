@@ -17,20 +17,35 @@
                         <th>codigo</th>
                         <th>nombre</th>
                         <th>apellido</th>
-                        <th>número</th>
+                        <th>número documento</th>
+                        <th>número telefono</th>
                         <th>fecha ingreso</th>
+                        <th>foto</th>
+                        <th>semestre</th>
+                        <th>promedio</th>
+                        <th>estado</th>
                     </tr>
                     </thead>
                     <tbody>
+                        {% for Estudiante in estudiantes %}
                         <tr>
-                            <td>1</td>
-                            <td>carlos</td>
-                            <td>guzman</td>
-                            <td>30146555</td>
+                            <td>{{Estudiante.codigo}}</td>
+                            <td>{{Estudiante.nombre}}</td>
+                            <td>{{Estudiante.apellido}}</td>
+                            <td>{{Estudiante.numeroDocumento}}</td>
+                            <td>{{Estudiante.numeroTelefono}}</td>
+                            <td>{{Estudiante.fecha}}</td>
                             <td>
+                            <img src="{{Estudiante.imagen.url }}" height="100"/>
+                            </td>
+                            <td>{{Estudiante.semestre}}</td>
+                            <td>{{Estudiante.promedio}}</td>
+                            <td>{{Estudiante.activo}}</td>
                                 <a name="" id="" class="btn btn-primary" href="{% url 'editar' %}" role="button">Editar</a> 
-                                |<a name="" id="" class="btn btn-danger" href="{#}" role="button">Borrar</a> |</td>
+                                |<a name="" id="" class="btn btn-danger" href="{#}" role="button">Borrar</a> |
+                            </td>
                         </tr>
+                        {% endfor %}
                     </tbody>
                 </thead>
             </table>
